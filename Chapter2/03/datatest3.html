@@ -8,17 +8,23 @@
 	</head>
 	
 	<body>
-		<h2>オブジェクトデータを表示する例</h2>
+		<h2>配列の値を表示する例</h2>
 		<div id="app">
-			<p>{{ myTea }}</p>
-			<p>{{ myTea.name }} ¥{{ myTea.price }}</p>
+
+			<!-- 配列がそのまま出力。 [] も '' も含む。 -->
+			<p>{{ myArray }}</p>
+
+			<!-- インデックス0番目 -->
+			<p>{{ myArray[0] }}</p>
 		</div>
 
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-					myTea:{name:'ダージリン', price:600}
+
+					//配列
+					myArray:['ダージリン','アールグレイ','セイロン']
 				}
 			})
 		</script>
