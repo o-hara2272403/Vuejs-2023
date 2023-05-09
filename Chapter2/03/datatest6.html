@@ -12,6 +12,8 @@
 		<div id="app">
 			{{ $data }}
 			<hr>
+			<!-- v-forでdataを全て出力。$dataで全データを示す。 -->
+			<!-- カッコ内は任意の変数名。dataの中身を入れてる。 -->
 			<li v-for="(item, key) in $data">{{ key }} : {{ item }}</li>
 		</div>
 

@@ -10,6 +10,7 @@
 	<body>
 		<h2>いろいろな型のデータを表示する例</h2>
 		<div id="app">
+			<!-- マスタッシュなのでそのまま文字として出力 -->
 			<p>{{ myNumber }}</p>
 			<p>{{ myText }}</p>
 			<p>{{ myBool }}</p>
@@ -20,8 +21,11 @@
 				//　id指定　//
 				el: '#app',
 				data: {
+					//数値型
 					myNumber:12345,
+					//文字型
 					myText:'Hello!!!',
+
 					myBool:true
 				}
 			})
