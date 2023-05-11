@@ -15,7 +15,7 @@
 			<label><input type="radio" value="face2.png" v-model="fileName">
 				face2</label><br>
 			<p>{{ fileName }} を選択<p>
-			<img v-bind:src="fileName"></img>
+			<img :src="fileName"></img>
 		</div>
 
 		<script>

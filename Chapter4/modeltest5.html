@@ -12,7 +12,9 @@
 		<div id="app">
 			<label><input type="checkbox" v-model="myAgree" >
 			同意します。</label>
-			<button v-bind:disabled="myAgree==false">送信</button>
+
+			<!-- myAgreeがfalseだったら押せるようになる -->
+			<button v-bind:disabled="!myAgree">送信</button>
 		</div>
 
 		<script>
