@@ -9,13 +9,15 @@
 	
 	<body>
 		<h2>残り秒数が0になったら、アラートを出す例</h2>
+		<!-- onclickはjavascript -->
 		<button onclick="startTimer()">START</button>
 
 		<script>
 			function startTimer() {
-				// 残り5秒
+				// 残り5秒がセットされる
 				this.restSec = 5;
 				// タイマースタート。1秒(1000ミリ秒）ごとに、countDown()を実行
+				//タイマーと言ったらセットインターバルが入る
 				this.timerObj = setInterval(() => { countDown() }, 1000)
 			}
 			function countDown() {
