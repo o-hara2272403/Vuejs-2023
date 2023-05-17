@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue.js 演習問題</title>
+<link rel="stylesheet" href="style.css" >
+<script src=
+"https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js">
+</script>
+</head>
+
+<body>
+<h2>クリックしたら、四則演算する例（ラジオボタン編）</h2>
+    <div id="app">
+    <p>
+    数１ = <input v-model.number="number1"><br>
+    数２ = <input v-model.number="number2">
+    </p>
+    <label><input type="radio" value="tasizan" v-model="keisan"name="operator">足し算</label>
+    <label><input type="radio" value="hikizan" v-model="keisan"name="operator">ひき算</label>
+    <label><input type="radio" value="kakezan" v-model="keisan"name="operator">かけ算</label>
+    <label><input type="radio" value="warizan" v-model="keisan"name="operator">わり算</label>
+    <label><input type="radio" value="amari" v-model="keisan"name="operator">あまり</label>
+    <button v-on:click="countUp">計算実行</button>
+    <hr>
+    <h3>計算結果</h3>
+    <p>{{ number1 }} {{ operator }} {{ number2 }} = {{ answer }}</p>
+    </div>
+<script>
+new Vue({
+el: '#app',
+    data: {
+    number1: 0,
+    number2: 0,
+    answer: 0,
+    operator: ''
+    },
+    methods: {
+        tasizan: function() {
+            this.operator='+'
+            this.answer=this.number1+this.number2;
+        },
+        hikizan: function() {
+            this.operator='-'
+            this.answer=this.number1-this.number2;
+        },
+        kakezan: function() {
+            this.operator='×'
+            this.answer=this.number1*this.number2;
+        },
+        warizan: function() {
+            this.operator='÷'
+            this.answer=this.number1/this.number2;
+        },
+        amari: function() {
+            this.operator='÷'
+            this.answer=this.number1%this.number2;
+        }}
+    })
+</script>
+</body>
+</html>

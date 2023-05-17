@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue.js 演習問題</title>
+<link rel="stylesheet" href="style.css" >
+<script src=
+"https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js">
+</script>
+</head>
+<body>
+    <h2>配列データを、テーブルで表示する例</h2>
+    <div id="app">
+        <h3>東北地方基本情報</h3>
+        <table border="1">
+            <thead>
+                <!-- 1 -->
+                <th v-for="item in header">{{item}}</th>
+            </thead>
+            <tbody>
+                <!-- 2 -->
+                <tr v-for="line in cities">
+                    <!-- 3 -->
+                    <td v-for="item in line">{{item}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                //4
+                header:["県名","県庁所在地","県の人口","県庁所在地の人口"],
+                cities:[
+                ['青森県','青森市',142.9,28.76],
+                ['岩手県','盛岡市',122.9,29.76],
+                ['秋田県','秋田市',96.95,31.58],
+                ['宮城県','仙台市',230.6,108.2],
+                ['山形県','山形市',108,25.38],
+                ['福島県','福島市',184.8,29.42]
+            ]
+        
+        }
+        })
+    </script>
+</body>
+</html>
