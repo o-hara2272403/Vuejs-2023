@@ -31,7 +31,7 @@
 						this.addItem = '';
 					},
 					removeLast: function() {
-						var lastIdx = this.dataArray.length - 1;
+						let lastIdx = this.dataArray.length - 1;
 						this.dataArray.splice(lastIdx, 1);
 					}
 				}
@@ -46,7 +46,8 @@
 			/* 現れる前の状態と、消えたときの状態は、透明度0で、右へ50移動*/
 			.v-enter, .v-leave-to {
 				opacity: 0;
-				transform: translateX(50px)
+				/*右へ50移動。マイナスで逆*/
+				transform: translateX(500px)
 			}
 		</style>
 	</body>
